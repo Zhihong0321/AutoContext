@@ -1,0 +1,33 @@
+# Auto-Context ROSTER — Human Directory & Knowledge Hooks
+# AI looks here to find who to ask when it has context gaps
+
+# Version: 1.0 | Last Updated: CHANGE_DATE
+
+people:
+  # Add your team members here
+  - id: "CHANGE_ID"
+    name: "CHANGE_NAME"
+    role: "CHANGE_ROLE"
+    authority_level: 3           # 1=info only, 2=recommend, 3=final authority
+    knowledge_hooks:
+      - "CHANGE_KNOWLEDGE_AREA_1"
+      - "CHANGE_KNOWLEDGE_AREA_2"
+    communication:
+      preferred: "WhatsApp"      # WhatsApp | Email | Slack
+      handle: "CHANGE_HANDLE"     # Phone or email
+    timezone: "Asia/Kuala_Lumpur"
+    active: true
+
+communication_channels:
+  whatsapp_business:
+    api_endpoint: "https://api.whatsapp.example.com/send"
+    enabled: false
+  email:
+    smtp_server: "smtp.company.com"
+    enabled: false
+
+query_protocol:
+  # How AI should format questions to humans
+  max_length: "1 sentence"
+  style: "Non-spammy, specific, actionable"
+  escalation_trigger: "no response in 24h"

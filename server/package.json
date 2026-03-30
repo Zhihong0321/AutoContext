@@ -1,0 +1,23 @@
+{
+  "name": "autocontext",
+  "version": "1.0.0",
+  "description": "Auto-Context v2.0 - MCP Server for organizational context vault",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^1.0.0",
+    "js-yaml": "^4.1.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}

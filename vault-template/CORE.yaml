@@ -1,0 +1,53 @@
+# Auto-Context CORE — Immutable Organizational Facts
+# Edit this file to define your organization's DNA
+# AI reads this to understand who you are and where you operate
+
+# Version: 1.0 | Last Updated: CHANGE_DATE
+
+identity:
+  org_name: "CHANGE_TO_ORG_NAME"
+  sector: "CHANGE_TO_SECTOR"  # e.g., Solar EPC, Finance, Healthcare
+  region: "CHANGE_TO_REGION"    # Primary operating region
+  fiscal_year: "Jan-Dec"
+
+technology:
+  core_stack:
+    - "CHANGE_TO_STACK_1"  # e.g., React + Next.js
+    - "CHANGE_TO_STACK_2"  # e.g., Python / FastAPI
+    - "CHANGE_TO_STACK_3"  # e.g., PostgreSQL
+  ai_platforms:
+    - model: "CHANGE_TO_AI_MODEL"
+      role: "Primary reasoning agent"
+
+context_budget:
+  max_tokens_per_task: 4000      # Hard limit to prevent context rot
+  priority_tiers:               # Order AI loads context
+    - "ROSTER (who to ask)"
+    - "QUERIES (fast answers)"
+    - "LOGIC (past decisions)"
+    - "CORE (org facts)"
+    - "INDEX (deep dive only if needed)"
+  compaction_trigger: 3500       # Compact when tokens hit this
+
+regional_logic:
+  # Org-specific rules for your region
+  tax_codes:
+    - "CHANGE_TAX_CODE_1"
+  regulations:
+    - "CHANGE_REGULATION_1"
+  policies:
+    - "CHANGE_POLICY_1"
+
+authority_nodes:
+  # Ultimate decision makers — AI must go here for final calls
+  lead: "@CHANGE_TO_NAME"
+  architecture: "@CHANGE_TO_NAME"
+  finance: "@CHANGE_TO_NAME"
+  technical: "@CHANGE_TO_NAME"
+
+governance:
+  retention_policy:
+    raw_intake_days: 7          # SCRAPBOOK auto-archives after 7 days
+    decision_log_years: 5       # LOGIC.md kept for 5 years
+  audit_level: "full"           # full | minimal | off
+  auto_compaction: true

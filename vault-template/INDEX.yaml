@@ -1,0 +1,31 @@
+# Auto-Context INDEX — Shadow Index for Big Files
+# AI reads this metadata first - only opens actual files when needed
+# Use this for PDFs, images, or large documents
+
+# Version: 1.0 | Last Updated: CHANGE_DATE
+
+version_control:
+  enabled: true
+  git_remote: "org/context-vault"
+  auto_commit: true
+
+# Add your big files here (PDFs, images, etc.)
+# AI won't read the actual file - just the vision_proxy and tags
+big_files:
+  - id: "CHANGE_ID"
+    file: "/vault/big-data/CHANGE_FILENAME.pdf"
+    tags:
+      - "CHANGE_TAG_1"
+      - "CHANGE_TAG_2"
+    vision_proxy: |
+      "Describe what this file contains in 2-3 sentences.
+      Include key information the AI should know.
+      Last updated: CHANGE_DATE."
+    action_triggers:
+      - "when this tag appears in conversation"
+    last_verified: "CHANGE_DATE"
+
+on_demand_pull:
+  # Rule: AI only pulls big files when INDEX lookup fails
+  rule: "search_index_first_then_open_file"
+  max_file_opens_per_task: 2
